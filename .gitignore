@@ -1,6 +1,12 @@
-venv/*
+# something user-specific (see also readme_denis.txt)
 .vscode/*
+.env
+# python virtual environment
+venv/*
+# the rest
 **/__pycache__/*
+# saved pytoch modules are saved here
 model/**
+# logs are saved here for some reason
 SelfPlay/log.txt
 SelfPlay/log_*
