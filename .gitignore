@@ -1,0 +1,6 @@
+venv/*
+.vscode/*
+**/__pycache__/*
+model/**
+SelfPlay/log.txt
+SelfPlay/log_*
