@@ -12,7 +12,7 @@ pip install -r SelfPlay/requirements.txt
 # Pointing at source folders in VSC
 based on: https://binx.io/blog/2020/03/05/setting-python-source-folders-vscode/
 
-Adjust contents of `.vscode/settings.json`: 
+Adjust contents of `.vscode/settings.json` (or create new if does not exist): 
 ```json
 {
     "python.pythonPath": "SelfPlay/venv/bin/python3",
