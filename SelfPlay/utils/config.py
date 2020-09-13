@@ -8,6 +8,7 @@ from utils.argument_parser import argument_parser
 from utils.constant import *
 from utils.optim_registry import get_supported_optimisers
 from utils.util import make_dir
+import pathlib
 
 
 def _read_config():
@@ -16,8 +17,11 @@ def _read_config():
     :return:
     '''
     config = ConfigParser()
-    path = os.path.abspath(os.pardir).split('/SelfPlay')[0]
-    config.read(os.path.join(path, 'SelfPlay/config', 'config.cfg'))
+    this_dir = str(pathlib.Path(__file__).parent.absolute())
+    project_root_path = this_dir.split('/SelfPlay')[0]
+    file_path = os.path.join(project_root_path, 'SelfPlay/config', 'config.cfg')
+    assert os.path.isfile(file_path), "can not find file {}".format(file_path)
+    config.read(file_path)
     return config._sections
 
 
